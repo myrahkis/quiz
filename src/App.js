@@ -1,9 +1,15 @@
 import "./App.css";
+import Header from "./components/header";
+import Main from "./components/main";
 
 function App() {
   return (
     <div className="App">
-      <p>AHHHHHHHHHHHHH</p>
+      <Header />
+      <Main>
+        <p>1/15</p>
+        <p>questions</p>
+      </Main>
     </div>
   );
 }

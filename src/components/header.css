@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Adversal Regular";
+  src: url("../fonts/adversal.otf") format("truetype");
+}
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  font-family: "Adversal Regular";
+}
+
+h1 {
+  font-size: 10rem;
+  padding-top: 1rem;
+}
