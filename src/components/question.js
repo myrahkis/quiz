@@ -1,11 +1,13 @@
 import "./question.css";
 
-function Question({ question, answer, dispatch }) {
+function Question({ index, question, answer, dispatch }) {
   const isAnswered = answer !== null;
 
   return (
     <div className="q-wrapper">
-      <h4>{question.question}</h4>
+      <h4>
+        <span>{index + 1}</span>. {question.question}
+      </h4>
       <div className="options">
         {question.options.map((option, i) => (
           <button
@@ -26,7 +28,12 @@ function Question({ question, answer, dispatch }) {
       </div>
       {isAnswered && (
         <div className="btn-wrapper">
-          <button className="next-btn">Следующий</button>
+          <button
+            className="next-btn"
+            onClick={() => dispatch({ type: "nextQuestion" })}
+          >
+            Следующий
+          </button>
         </div>
       )}
     </div>
