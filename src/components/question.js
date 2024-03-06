@@ -1,13 +1,11 @@
 import "./question.css";
 
-function Question({ index, question, answer, dispatch }) {
+function Question({ question, answer, dispatch }) {
   const isAnswered = answer !== null;
 
   return (
     <div className="q-wrapper">
-      <h4>
-        <span>{index + 1}</span>. {question.question}
-      </h4>
+      <h4>{question.question}</h4>
       <div className="options">
         {question.options.map((option, i) => (
           <button
