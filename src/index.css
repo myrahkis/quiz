@@ -2,11 +2,12 @@
   --color-darkest: #10363b;
   --color-wrong: #c25806;
   --color-right: #458876;
+  --color-options: #264448;
   --color-main: #aad1d6;
   --color-lightest: #e6f4f1;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400..600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -31,13 +32,17 @@ body {
   display: flex;
   justify-content: center;
   padding: 3rem;
-  margin-top: 2rem;
+  /* margin-top: 1rem; */
 }
 
 h1 {
   font-size: 9rem;
   display: flex;
   align-items: center;
+}
+
+button {
+  font-family: "Manrope", sans-serif;
 }
 
 .error {
