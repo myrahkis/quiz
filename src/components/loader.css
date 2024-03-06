@@ -1,0 +1,25 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rem;
+  gap: 1.5rem;
+  font-size: 2rem;
+}
+
+/* анимация загрузчика из -> https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+
+.infinity-10 {
+  width: 100px;
+  height: 12px;
+  background: linear-gradient(90deg, currentColor 50%, #0000 0) 0 0%,
+    linear-gradient(-90deg, currentColor 50%, #0000 0) 0 0%;
+  background-size: 20px 100%;
+  background-repeat: repeat-x;
+  animation: i10 1s infinite linear;
+}
+@keyframes i10 {
+  100% {
+    background-position: -20px 0%, 20px 0%;
+  }
+}
