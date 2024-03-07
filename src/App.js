@@ -31,12 +31,9 @@ function reducer(state, action) {
         status: "ready",
       };
     case "dataFailed":
-      const good = state.questions === questionsNotAPI.questions;
-
       return {
         ...state,
-        status: good ? "ready" : "error",
-        questions: action.payload,
+        status: "error",
       };
     case "start":
       return {
@@ -100,7 +97,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((e) =>
-        dispatch({ type: "dataFailed", payload: questionsNotAPI.questions })
+        dispatch({ type: "dataReceived", payload: questionsNotAPI.questions })
       );
   }, []);
 
