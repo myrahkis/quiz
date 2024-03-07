@@ -64,3 +64,34 @@ button {
   height: 50px;
   margin-right: -1rem;
 }
+
+.finished {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem;
+  margin-top: 15rem;
+  border-radius: 3rem;
+  background-color: var(--color-main);
+  color: var(--color-darkest);
+}
+.best-result {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.restart-btn {
+  cursor: pointer;
+  border: none;
+  margin: 10rem auto;
+  border-radius: 2.5rem;
+  width: 15rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  background-color: var(--color-main);
+}
+.restart-btn:hover {
+  background-color: var(--color-right);
+  color: var(--color-lightest);
+  transform: scale(0.96);
+  transition: all 0.2s ease-out;
+}

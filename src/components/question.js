@@ -1,6 +1,7 @@
 import "./question.css";
+import Timer from "./timer";
 
-function Question({ question, answer, dispatch }) {
+function Question({ question, answer, dispatch, index, q, seconds }) {
   const isAnswered = answer !== null;
 
   return (
@@ -24,13 +25,24 @@ function Question({ question, answer, dispatch }) {
           </button>
         ))}
       </div>
-      {isAnswered && (
-        <div className="btn-wrapper">
+      <div className="btn-wrapper">
+        <Timer dispatch={dispatch} seconds={seconds}/>
+        {isAnswered && index + 1 < q && (
           <button
             className="next-btn"
             onClick={() => dispatch({ type: "nextQuestion" })}
           >
             Следующий
+          </button>
+        )}
+      </div>
+      {isAnswered && index + 1 === q && (
+        <div className="btn-wrapper">
+          <button
+            className="next-btn"
+            onClick={() => dispatch({ type: "finished" })}
+          >
+            Итоги
           </button>
         </div>
       )}

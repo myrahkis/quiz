@@ -52,6 +52,7 @@ h4 {
 }
 
 .btn-wrapper {
+  display: inline-block;
   width: 100%;
 }
 .next-btn {
@@ -68,4 +69,12 @@ h4 {
   background-color: var(--color-options);
   transform: scale(0.96);
   transition: all 0.2s ease-out;
+}
+
+.timer {
+  float: left;
+  border: 2px solid var(--color-darkest);
+  border-radius: 2.5rem;
+  padding: 1.5rem 3.5rem;
+  color: var(--color-darkest);
 }

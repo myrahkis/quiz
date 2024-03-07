@@ -1,9 +1,9 @@
 import "./progressBar.css";
 
-function ProgressBar({ index, q, points, maxPoints }) {
+function ProgressBar({ index, q, points, maxPoints, answer }) {
   return (
     <div className="progress">
-      <progress max={q} value={index} />
+      <progress max={q} value={index + +(answer !== null)} />
       <p>
         Question <strong>{index + 1}</strong>/{q}
       </p>
