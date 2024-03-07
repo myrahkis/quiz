@@ -8,6 +8,7 @@ import Ready from "./components/ready";
 import Question from "./components/question";
 import ProgressBar from "./components/progressBar";
 import Finished from "./components/finished";
+import questionsNotAPI from "./questions.json";
 
 const initState = {
   questions: [],
@@ -32,7 +33,9 @@ function reducer(state, action) {
     case "dataFailed":
       return {
         ...state,
-        status: "error",
+        status:
+          state.questions === questionsNotAPI.questions ? "ready" : "error",
+        questions: action.payload,
       };
     case "start":
       return {
@@ -95,7 +98,9 @@ function App() {
     fetch("http://localhost:8000/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((e) => dispatch({ type: "dataFailed" }));
+      .catch((e) =>
+        dispatch({ type: "dataFailed", payload: questionsNotAPI.questions })
+      );
   }, []);
 
   return (
