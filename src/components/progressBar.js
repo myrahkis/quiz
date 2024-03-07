@@ -5,7 +5,7 @@ function ProgressBar({ index, q, points, maxPoints }) {
     <div className="progress">
       <progress max={q} value={index} />
       <p>
-        Question <strong>{index}</strong>/{q}
+        Question <strong>{index + 1}</strong>/{q}
       </p>
       <p>
         <strong>{points}</strong>/{maxPoints}

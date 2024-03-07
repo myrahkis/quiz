@@ -19,13 +19,13 @@ h4 {
 
 .options {
   display: inherit;
+  width: 90%;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 .option-btn {
   cursor: pointer;
-  width: 80rem;
   border: none;
   border-radius: 2.5rem;
   font-size: 2rem;

@@ -83,7 +83,7 @@ function App() {
         {status === "active" && (
           <>
             <ProgressBar
-              index={index + 1}
+              index={index}
               q={q_amount}
               points={points}
               maxPoints={maxPoints}
