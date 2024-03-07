@@ -31,10 +31,11 @@ function reducer(state, action) {
         status: "ready",
       };
     case "dataFailed":
+      const good = state.questions === questionsNotAPI.questions;
+
       return {
         ...state,
-        status:
-          state.questions === questionsNotAPI.questions ? "ready" : "error",
+        status: good ? "ready" : "error",
         questions: action.payload,
       };
     case "start":
